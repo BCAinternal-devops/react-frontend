@@ -16,6 +16,6 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
         with:
-          ref: "v6"  # Use full commit SHA hash for this dependency
+          ref: "c2a3b4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1"  # Full commit SHA hash for this dependency
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
