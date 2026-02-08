@@ -5,7 +5,8 @@ It allows users to add, view, and manage shopping items and communicates with a 
 
 ## 📊 Project Presentations
 
-### Frontend
+### Frontend summary
+
 📘 [Frontend Presentation (PDF)](https://github.com/BCAinternal-devops/react-frontend/blob/main/FRONTEND%20(2).pdf)
 
 ## Tech Stack
