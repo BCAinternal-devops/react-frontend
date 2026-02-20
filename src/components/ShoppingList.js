@@ -33,7 +33,6 @@ function ShoppingList({ onDelete, onUpdateQuantity, remainingBudget }) {
           <tr style={{ backgroundColor: "#4CAF50", color: "white" }}>
             <th style={{ padding: "10px", border: "1px solid #ddd" }}>Item</th>
             <th style={{ padding: "10px", border: "1px solid #ddd" }}>Quantity</th>
-            <th style={{ padding: "10px", border: "1px solid #ddd" }}>Price</th>
             <th style={{ padding: "10px", border: "1px solid #ddd" }}>Total</th>
             <th style={{ padding: "10px", border: "1px solid #ddd" }}>Bought</th>
             <th style={{ padding: "10px", border: "1px solid #ddd" }}>Actions</th>
@@ -89,9 +88,6 @@ function ShoppingList({ onDelete, onUpdateQuantity, remainingBudget }) {
                     +
                   </button>
                 </div>
-              </td>
-              <td style={{ padding: "10px", border: "1px solid #ddd" }}>
-                {item.price}
               </td>
               <td style={{ padding: "10px", border: "1px solid #ddd" }}>
                 {item.quantity * item.price}
