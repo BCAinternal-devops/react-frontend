@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getItems, deleteItem } from "../api/api";
+import PropTypes from "prop-types";
+import { getItems } from "../api/api";
 
 function ShoppingList({ onDelete, onUpdateQuantity, remainingBudget }) {
   const [items, setItems] = useState([]);
@@ -123,3 +124,9 @@ function ShoppingList({ onDelete, onUpdateQuantity, remainingBudget }) {
 }
 
 export default ShoppingList;
+
+ShoppingList.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+  onUpdateQuantity: PropTypes.func.isRequired,
+  remainingBudget: PropTypes.number.isRequired,
+};
