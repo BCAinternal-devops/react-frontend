@@ -3,7 +3,7 @@ import App from './App';
 
 test('renders budget heading', () => {
   render(<App />);
-  expect(screen.getByText(/Manage Your Budget/i)).toBeInTheDocument();
+  expect(screen.getByText(/Manage Your Budget and Shopping List/i)).toBeInTheDocument();
 });
 
 test('basic test passes', () => {
