@@ -1,12 +1,5 @@
 import { useState } from "react";
 
-const categories = [
-  { label: "Grocery 🛒", value: "grocery" },
-  { label: "Electronics 💻", value: "electronics" },
-  { label: "Clothing 👗", value: "clothing" },
-  { label: "Cosmetics 💄", value: "cosmetics" },
-];
-
 function AddItemForm({ onAdd, remainingBudget }) {
   const [item, setItem] = useState({
     itemName: "",

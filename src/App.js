@@ -6,11 +6,9 @@ import ProgressBar from "./components/ProgressBar";
 
 function App() {
   const [refresh, setRefresh] = useState(false);
-  const [budget, setBudget] = useState(1000);
   const [totalBudget, setTotalBudget] = useState(0);
   const [remainingBudget, setRemainingBudget] = useState(0);
   const [isBudgetLocked, setIsBudgetLocked] = useState(false);
-  const [items, setItems] = useState([]);
 
   useEffect(() => {
     setRemainingBudget(totalBudget);
