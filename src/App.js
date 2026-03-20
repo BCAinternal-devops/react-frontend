@@ -9,6 +9,7 @@ function App() {
   const [totalBudget, setTotalBudget] = useState(0);
   const [remainingBudget, setRemainingBudget] = useState(0);
   const [isBudgetLocked, setIsBudgetLocked] = useState(false);
+  const [items, setItems] = useState([]); // Reintroduced items state
 
   useEffect(() => {
     setRemainingBudget(totalBudget);
