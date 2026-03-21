@@ -21,15 +21,13 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '24.x'
+          node-version: '20.x'
 
       - name: npm install, build, and test
         run: |
           npm install
           npm run build --if-present
           npm run test --if-present
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -53,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FA9757F5C1754DF08EDA20E3456DB746 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2C509528AE324A1495B8C71BE62D70A2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D2954238D6524FDBAD5994637F60A2B6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1246317AB9194BE491DD602498E570CC }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_02D73CFBE4C14BFAA8B276B846C50D06 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_51E4FD6147244BC08B79E8B19A19DE5D }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -64,3 +62,4 @@ jobs:
           app-name: 'shoppinglistfrontend'
           slot-name: 'Production'
           package: .
+          
