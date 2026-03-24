@@ -46,6 +46,8 @@ function ShoppingList({ onDelete, onUpdateQuantity, remainingBudget }) {
               style={{
                 backgroundColor: "#f9f9f9",
                 textAlign: "center",
+                textDecoration: item.bought ? "line-through" : "none",
+                opacity: item.bought ? 0.6 : 1,
               }}
             >
               <td style={{ padding: "10px", border: "1px solid #ddd" }}>
